@@ -38,6 +38,15 @@ ol, ul {
   top: 0;
   z-index: 2;
   border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+  transition: background-color 0.3s;
+}
+
+.navbar-light {
+  background-color: #FAFBFC;
+  color: #292D33;
+}
+.navbar-light .header-logo-path {
+   fill:  #292D33;
 }
 
 .header-image {
