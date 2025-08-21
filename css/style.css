@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 
 @font-face {
   font-family: "Bebas Neue";
@@ -12,7 +15,7 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 .container {
-  max-width: 1440px;
+  max-width: 90rem;
   margin: auto;
 }
 
@@ -23,15 +26,19 @@ a {
 ol, ul {
     list-style: none;
 }
+
+.mobile-menu {
+  display: none;
+}
 .header {
-  padding-top: 94px;
+  padding-top: 5.875rem;
   min-height: 100vh;
 }
 .navbar {
   display: flex;
   align-items: center;
   color: #fff;
-  height: 94px;
+  height: 5.875rem;
   position: fixed;
   width: 100%;
   left: 0;
@@ -40,11 +47,17 @@ ol, ul {
   border-bottom: 1px solid rgba(235, 235, 240, 0.2);
   transition: background-color 0.3s, height 0.3s;
 }
-
+.phone-icon {
+  fill: #5C8EE6;
+}
+.logo-svg {
+  width: 9rem;
+  height: 2.75rem;
+}
 .navbar-light {
   background-color: #FAFBFC;
   color: #292D33;
-  height: 72px;
+  height: 4.5rem;
 }
 .navbar-light .header-logo-path {
    fill:  #292D33;
@@ -54,7 +67,7 @@ ol, ul {
   background-image: url('../img/bg-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center left .1875rem;
   position: relative;
 }
 
@@ -63,7 +76,7 @@ ol, ul {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(41, 45, 51, 0.6);
+  background: rgba(41, 45, 51, 0.8);
   width: 100%;
   height: 100%;
   z-index: 0;
@@ -72,7 +85,7 @@ ol, ul {
 .header-logo {
   display: flex;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 3.125rem;
   border-right: 1px solid rgba(235, 235, 240, 0.2);
   height: 100%;
 }
@@ -80,33 +93,36 @@ ol, ul {
   display: flex;
   flex-basis: 100%;
   list-style: none;
-  padding: 0 50px;
+  padding: 0;
+  padding-left: 3.125rem;
   margin: 0;
 }
 .header-nav-link {
-  font-size: 16px;
-  margin-right: 50px;
+  font-size: 1rem;
   color: inherit;
+}
+.header-nav-item:not(:last-child) {
+  margin-right: 3.125rem;
 }
 
 .header-phone {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-right: 50px;
+  gap: .625rem;
+  margin-right: 3.125rem;
 }
 .header-phone-link {
-  font-size: 16px;
+  font-size: 1rem;
   color: inherit;
 }
 .button {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   color: #fff;
   background-color: #3A71D1;
-  padding: 25px 60px;
+  padding: 1.5625rem 3.75rem;
   border: none;
   display: inline-block;
   cursor: pointer;
@@ -114,48 +130,56 @@ ol, ul {
 .navbar-button {
   flex-shrink: 0;
   height: 100%;
+  padding: 1.5625rem 3.125rem;
 }
-
+.navbar-button .button-icon {
+  display: none;
+}
 .seporator {
   background: #5c8ee6;
-  width: 150px;
-  height: 2px;
+  width: 9.375rem;
+  height: .125rem;
 }
 
 .header-content {
   position: relative;
   z-index: 1;
-  padding-top: 150px;
+  padding-top: 9.375rem;
   color: #fff;
 }
 
 .header-title {
-  max-width: 1080px;
+  max-width: 67.5rem;
   font-family: "Bebas Neue";
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 120%;
-  margin: 30px 0;
+  margin: 1.875rem 0;
+  letter-spacing: .05rem;
+  word-spacing: -0.1rem;
 }
 
 .header-text {
-  max-width: 720px;
-  font-weight: 400px;
-  font-size: 16px;
+  max-width: 45rem;
+  font-weight: 25rem;
+  font-size: 1rem;
   line-height: 160%;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
-
+.header-button {
+  padding: 1.625rem 3.125rem;
+}
 .header-features {
   display: flex;
-  min-height: 168px;
+  min-height: 10.5rem;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 6.25rem;
   color: #fff;
   position: relative;
 }
 
 .header-features-item {
-  padding: 30px 50px;
+  padding: 1.75rem 3.125rem;
+  width: 18rem;
   border: 1px solid rgba(235, 235, 240, 0.2)
 }
 .header-features-item:not(:last-child) {
@@ -163,18 +187,20 @@ ol, ul {
 }
 .header-features-text {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
+  margin-bottom: 0;
+  margin-top: 1.125rem;
 }
 
 .section {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 9.375rem;
+  margin-bottom: 9.375rem;
 
 }
 .section-title {
   font-family: "Bebas Neue";
-  font-size: 60px;
+  font-size: 3.75rem;
   line-height: 120%;
   color: #292D33;
 }
@@ -182,16 +208,16 @@ ol, ul {
 .steps {
   display: flex;
   padding: 0;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .steps-item {
-  max-width: 330px;
+  max-width: 20.625rem;
 }
 
 .steps-num {
   font-family: "Bebas Neue";
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 120%;
   color: #5C8EE5;
@@ -201,27 +227,27 @@ ol, ul {
 
 .steps-num::after {
   content: '';
-  height: 1px;
+  height: .0625rem;
   background: #EBEBF0;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 
 .steps-title {
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 160%;
-  margin-bottom: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 1.875rem;
+  margin-bottom: .625rem;
 }
 
 .steps-text {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   color: #828a99;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: .625rem;
+  margin-bottom: 1.25rem;
 }
 
 .steps-link{
@@ -229,14 +255,171 @@ ol, ul {
   align-items: center;
   color: #5C8EE5;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
 }
 
 .steps-link::before {
   content: '';
-  height: 1px;
+  height: .0625rem;
   background: #5C8EE5;
-  width: 40px;
-  margin-right: 20px;
+  width: 2.5rem;
+  margin-right: 1.25rem;
+}
+
+@media (max-width: 1700px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1460px) {
+  html {
+    font-size: 13px;
+  }
+  .header-logo {
+    padding: 2rem;
+  }
+  .logo-svg {
+    max-width: 6rem;
+  }
+  .header-nav {
+    padding-left: 2rem;
+  }
+  .header-nav-item:not(:last-child) {
+    margin-right: 1rem;
+  }
+  /* .header-image {
+    background-position: center;
+  } */
+   .header-phone {
+    margin-right: 2rem;
+   }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 70rem;
+  }
+  .header-phone {
+    display: none;
+  }
+  .navbar {
+    height: 5rem;
+  }
+  .navbar-button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 60rem;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-logo {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .mobile-menu-toggle {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.8rem;
+    border-right: 1px solid rgba(235, 235, 240, 0.2);
+  }
+  .navbar-light .mobile-menu-line {
+    background-color: #292D33;
+  }
+  .mobile-menu-line {
+    height: 1px;
+    background-color: #fff;
+    width: 100%;
+  }
+  .mobile-menu-line:nth-child(2) {
+    width: 80%;
+  }
+  .navbar-button .button-text {
+    display: none;
+  }
+  .navbar-button .button-icon {
+    display: block;
+    fill: #fff;
+  }
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 2;
+    background-color: #fff;
+    padding-top: 5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .mobile-menu.is-open {
+    display: block;
+  }
+  .mobile-menu-nav {
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  .mobile-menu-nav-item {
+    margin-bottom: 2rem;
+
+  }
+  .mobile-menu-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 160%;
+    color: #292D33
+  }
+  .mobile-submenu {
+    padding: 0;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+  .mobile-submenu-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #828a99;
+  }
+  .mobile-phone {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+    color: #292D33;
+    text-decoration-line: underline;
+    border-top: 1px solid #EBEBF0;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .mobile-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .mobile-info-adress, 
+  .mobile-info-email {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #292D33;
+  }
 }
